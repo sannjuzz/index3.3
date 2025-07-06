@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FOSS Club Iconic Logo Redesigned</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      overflow: hidden;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      font-family: 'Orbitron', sans-serif;
+      text-transform: uppercase;
+      color: #ffffff;
+      border: 3px solid #00ffe7;
+      border-radius: 20px;
+      padding: 40px 80px;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(30px);
+      box-shadow: 0 0 80px rgba(0,255,231,0.5);
+      animation: fadeIn 2s ease forwards, pulse 5s infinite alternate;
+    }
+    .icon {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      background: radial-gradient(circle, #00ffe7, #00c3ff);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 80px rgba(0,255,231,0.8);
+      margin-right: 50px;
+      transition: transform 1s ease;
+    }
+    .icon:hover {
+      transform: rotate(720deg) scale(1.2);
+    }
+    .icon::before {
+      content: '\1F4BB'; /* Laptop symbol */
+      font-size: 4rem;
+      color: #ffffff;
+      filter: drop-shadow(0 0 20px #00ffe7);
+    }
+    .text {
+      font-size: 5rem;
+      font-weight: 900;
+      letter-spacing: 8px;
+      color: #fff;
+    }
+    .text span {
+      display: inline-block;
+      position: relative;
+      width: 90px;
+      height: 90px;
+      border: 5px solid #00ffe7;
+      border-radius: 50%;
+      box-shadow: 0 0 30px #00ffe7, inset 0 0 30px #00c3ff;
+      margin: 0 15px;
+      background: radial-gradient(circle at center, rgba(0,255,231,0.1), transparent);
+    }
+    .text span::before {
+      content: '\269B'; /* Atom symbol inside O */
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2.8rem;
+      color: #00ffe7;
+      text-shadow: 0 0 20px #00c3ff;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(-50px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes pulse {
+      from { box-shadow: 0 0 50px rgba(0,255,231,0.4); }
+      to { box-shadow: 0 0 100px rgba(0,255,231,0.8); }
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <div class="icon"></div>
+    <div class="text">F<span></span>SS</div>
+  </div>
+</body>
+</html>
